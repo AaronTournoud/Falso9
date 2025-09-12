@@ -6,7 +6,7 @@ export default function Home() {
       
       <header className="relative flex flex-col items-center justify-center text-center min-h-[95vh] bg-gray-900">
         
-        {/*Fondo imaagen, sino bg-gradient-to-b from-green-700 via-green-800 to-green-900*/}
+        {/*Fondo imagen, sino bg-gradient-to-b from-green-700 via-green-800 to-green-900*/}
         <Image
           src="/cancha.jpg"
           alt="Fondo de estadio de fútbol"
@@ -20,6 +20,7 @@ export default function Home() {
 
         {/* Contenido en primer plano */}
         <div className="relative z-10 px-6 sm:px-12">
+          
           <Image
             src="/Falso_9.logo.png"
             alt="Falso 9 Logo"
@@ -44,6 +45,7 @@ export default function Home() {
             >
               Descargar App
             </a>
+
             <a
               href="#features"
               className="px-6 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-green-800 transition-colors"
@@ -77,11 +79,14 @@ export default function Home() {
       <section id="download" className="py-16 px-5 bg-green-700">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-black mb-8">Descargá la App</h2>
-          <h3 className="text-lg text-white mb-8">Disponible para Android y iOS</h3>
+          <h3 className="text-lg text-white mb-8">Disponible para Android</h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-yellow-500 text-black rounded-lg font-medium hover:bg-green-800 transition-colors">
+            <a 
+              href="/app-release.apk"
+              download
+              className="px-8 py-4 bg-yellow-500 text-black rounded-lg font-medium hover:bg-green-800 transition-colors">
               Descargar
-            </button>
+            </a>
           </div>
         </div>
       </section>
