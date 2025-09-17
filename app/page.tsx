@@ -1,60 +1,90 @@
+"use client"
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
     <div className="font-sans min-h-screen flex flex-col justify-between">
       
-      <header className="relative flex flex-col items-center justify-center text-center min-h-[95vh] bg-gray-900">
-        
-        {/*Fondo imagen, sino bg-gradient-to-b from-green-700 via-green-800 to-green-900*/}
+      <header className="relative flex items-center justify-center text-center h-screen bg-gray-900">
+        {/* Fondo imagen */}
         <Image
-          src="/cancha.jpg"
+         src="/cancha.jpg"
           alt="Fondo de estadio de fútbol"
           fill
           priority
-          className="object-cover object-center opacity-80"
+          className="object-cover object-center opacity-50"
         />
-        
-        {/* Capa de oscurecimiento para contraste */}
-        <div className="absolute inset-0 bg-black/40" />
 
-        {/* Contenido en primer plano */}
-        <div className="relative z-10 px-6 sm:px-12">
-          
-          <Image
-            src="/Falso_9.logo.png"
-            alt="Falso 9 Logo"
-            width={250}
-            height={120}
-            priority
-            className="mx-auto mb-4 drop-shadow-lg"
-          />
+  {/* Capa de oscurecimiento */}
+  <div className="absolute inset-0 bg-black/40" />
 
-          <h1 className="text-5xl sm:text-6xl font-bold text-white drop-shadow-md leading-tight">
-            Bienvenido a Falso 9
-          </h1>
+  {/* Contenido en primer plano */}
+  <div className="relative z-10 px-6 sm:px-12 max-w-6xl w-full">
+    <div className="grid md:grid-cols-2 gap-10 items-center">
+      
+      {/* Columna Izquierda */}
+      <div className="text-center md:text-left space-y-6">
+        <Image
+          src="/Falso_9.logo.png"
+          alt="Falso 9 Logo"
+          width={250}
+          height={120}
+          priority
+          className="mx-auto md:mx-0 md:ml-8 mb-4 drop-shadow-lg"
+        />
 
-          <p className="mt-4 text-lg sm:text-xl max-w-2xl mx-auto text-green-100 leading-relaxed">
-            El juego futbolero para disfrutar entre amigos.
-          </p>
+            {/* Aparece el texto con un efecto de tipo desplazamiento */}
+            <motion.h1
+              initial={{ opacity: 0, y: -30 }}   // empieza invisible y aparece de a poco
+              animate={{ opacity: 1, y: 0 }}     // aparece y baja a su lugar
+              transition={{ duration: 1 }}     
+              className="text-5xl sm:text-6xl font-bold text-white drop-shadow-md leading-tight text-center md:text-left"
+              >
+              Bienvenido a <br /> Falso 9
+              </motion.h1>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#download"
-              className="px-6 py-3 bg-white text-green-800 rounded-full font-semibold hover:bg-gray-100 shadow-lg transition-colors"
-            >
-              Descargar App
-            </a>
+        <p className="mt-4 text-lg sm:text-xl max-w-md text-green-100 leading-relaxed mx-auto md:mx-0">
+          El juego futbolero para disfrutar entre amigos.
+        </p>
 
-            <a
-              href="#features"
-              className="px-6 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-green-800 transition-colors"
-            >
-              Ver Funcionalidades
-            </a>
-          </div>
+        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a
+            href="#download"
+            className="px-6 py-3 bg-white text-green-800 rounded-full font-semibold hover:bg-gray-100 shadow-lg transition-colors"
+          >
+            Descargar App
+          </a>
+          <a
+            href="#features"
+            className="px-6 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-green-800 transition-colors"
+          >
+            Ver Funcionalidades
+          </a>
         </div>
-      </header>
+      </div>
+
+      {/* Columna Derecha*/}
+      {/* Aparece la imagen con un efecto de tipo desplazamiento */}
+      <div className="flex justify-center">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="relative w-[250px] h-[500px]"
+          >
+            <Image
+              src="/App_Falso9.png"
+              alt="Falso 9 App"
+              fill
+              className="object-cover"
+            />
+          </motion.div>
+        </div>
+    </div>
+  </div>
+</header>
       
       <section id="features" className="py-16 px-5 bg-white">
         <div className="max-w-4xl mx-auto text-center">
