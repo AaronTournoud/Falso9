@@ -112,7 +112,7 @@ export default function Home() {
           <h3 className="text-lg text-white mb-8">Disponible para Android</h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/app-release.apk"
+              href="/#"
               download
               className="px-8 py-4 bg-yellow-500 text-black rounded-lg font-medium hover:bg-green-800 transition-colors">
               Descargar
