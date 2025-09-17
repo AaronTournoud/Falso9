@@ -75,7 +75,7 @@ export default function Home() {
             className="relative w-[250px] h-[500px]"
           >
             <Image
-              src="/App_Falso9.png"
+              src="/app_Falso9.png"
               alt="Falso 9 App"
               fill
               className="object-cover"
