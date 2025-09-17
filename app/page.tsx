@@ -113,7 +113,6 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/#"
-              download
               className="px-8 py-4 bg-yellow-500 text-black rounded-lg font-medium hover:bg-green-800 transition-colors">
               Descargar
             </a>
