@@ -114,8 +114,7 @@ export default function Home() {
             <a 
               href="/app-release.apk"
               download
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-yellow-500 text-black rounded-lg font-medium hover:bg-yellow-600 transition-colors text-sm sm:text-base shadow-lg"
-            >
+              className="px-8 py-4 bg-yellow-500 text-black rounded-lg font-medium hover:bg-green-800 transition-colors">
               Descargar
             </a>
           </div>
