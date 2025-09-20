@@ -49,7 +49,7 @@ export default function Home() {
                 El juego futbolero para disfrutar entre amigos.
               </p>
 
-              <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start px-4 md:px-0">
+              <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start px-4 md:px-0 pb-3">
                 <a
                   href="#download"
                   className="px-6 py-3 bg-white text-green-800 rounded-full font-semibold hover:bg-gray-100 shadow-lg transition-colors text-sm sm:text-base"
@@ -78,7 +78,7 @@ export default function Home() {
                   src="/app_Falso9.png"
                   alt="Falso 9 App"
                   fill
-                  className="object-cover rounded-2xl shadow-2xl"
+                  className="object-cover rounded-2xl"
                 />
               </motion.div>
             </div>
