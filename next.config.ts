@@ -1,7 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async rewrites() {
+    return [
+      {
+        source: "/juego",
+        destination: "/juego/index.html",
+      },
+      {
+        source: "/juego/:path*",
+        destination: "/juego/index.html",
+      },
+    ];
+  },
 };
 
 export default nextConfig;
