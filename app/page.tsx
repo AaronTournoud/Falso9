@@ -50,12 +50,21 @@ export default function Home() {
               </p>
 
               <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start px-4 md:px-0 pb-3">
+              <a
+                  href="/juego"
+                  className="px-6 py-3 bg-green-800 text-white rounded-full font-semibold hover:bg-gray-100 shadow-lg transition-colors text-sm sm:text-base"
+                >
+                  Jugar
+                </a>
+                
+                
                 <a
                   href="#download"
                   className="px-6 py-3 bg-white text-green-800 rounded-full font-semibold hover:bg-gray-100 shadow-lg transition-colors text-sm sm:text-base"
                 >
                   Descargar App
                 </a>
+                
                 <a
                   href="#features"
                   className="px-6 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-green-800 transition-colors text-sm sm:text-base"
